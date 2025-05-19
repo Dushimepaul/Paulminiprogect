@@ -1,401 +1,125 @@
-/* Reset global */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* ========== COULEURS GÉNÉRALES ========== */
+:root {
+  --primary-blue: #007bff;
+  --success-green: #28a745;
+  --dark-black: #000000;
+  --light-gray: #f8f9fa;
+  --text-dark: #1a1a1a;
 }
 
+/* ========== RÉINITIALISATION DE BASE ========== */
 body {
-    color: white;
-    background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
-.header {
-    justify-content: center;
-    width: 100%;
-    height: 500px;
-    padding: 0 30px;
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: var(--light-gray) !important;
 }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    padding: 30px;
-    background-color: black;
-    box-shadow: 5px 0 10px gray;
-    z-index: 100;
+.navbar-brand span {
+  color: var(--primary-blue);
 }
 
-nav ul {
-    display: flex;
-    margin-right: 35px;
+.navbar-nav .nav-link {
+  color: var(--dark-black);
+  font-weight: 500;
 }
 
-nav ul li {
-    list-style: none;
+.navbar-nav .nav-link:hover {
+  color: var(--success-green);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    margin: 0 15px;
-    position: relative;
-    transition: all 0.6s ease;
+/* ========== HEADER ========== */
+header {
+  background-color: var(--light-gray);
+  color: var(--dark-black);
 }
 
-nav ul li:hover {
-    background-color: brown;
-    border-radius: 7px;
-    text-decoration: underline;
+header .lead {
+  color: var(--success-green);
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 30px;
+header h1 span {
+  color: var(--primary-blue);
 }
 
-span {
-    color: chocolate;
+/* ========== SECTIONS ========== */
+section h2 {
+  color: var(--primary-blue);
 }
 
-/* Hero section */
-.tete {
-    display: flex;
-    align-items: center;
-    margin: 6% 0 0 10%;
+section p,
+section li {
+  color: var(--dark-black);
 }
 
-.tete p {
-    margin: 20px;
-    font-size: 25px;
+/* ========== TABS ========== */
+.nav-tabs .nav-link.active {
+  background-color: var(--primary-blue);
+  color: #fff;
+  font-weight: bold;
 }
 
-.img {
-    width: 500px;
-    height: 500px;
+.nav-tabs .nav-link {
+  color: var(--primary-blue);
 }
 
-.tete .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* ========== SERVICES ========== */
+.card {
+  border: 1px solid var(--primary-blue);
 }
 
-br {
-    margin: 10px;
+.card-title {
+  color: var(--primary-blue);
 }
 
-.open, .close {
-    font-size: 25px;
-    display: none;
+.btn-outline-primary {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 
-/* About section */
-.about {
-    margin: 80px 10px;
+.btn-outline-primary:hover {
+  background-color: var(--primary-blue);
+  color: #fff;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px;
+/* ========== PORTFOLIO ========== */
+section img {
+  border: 3px solid var(--success-green);
 }
 
-.col-1 {
-    width: 500px;
-    flex-basis: 35%;
+/* ========== CONTACT ========== */
+section a i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
 }
 
-.col-1 img {
-    width: 100%;
-    border-radius: 10px;
+section a i:hover {
+  color: var(--success-green);
 }
 
-h1 {
-    margin-left: 40px;
-    padding-bottom: 20px;
+/* ========== FORMULAIRE ========== */
+form input,
+form textarea {
+  border: 1px solid var(--primary-blue);
 }
 
-h2 {
-    padding: 10px;
-    padding-bottom: 20px;
-    font-size: 30px;
+form button {
+  background-color: var(--primary-blue);
+  border: none;
 }
 
-p {
-    padding: 20px;
+form button:hover {
+  background-color: var(--success-green);
 }
 
-.title {
-    display: flex;
-    padding: 30px;
-    cursor: pointer;
-    text-decoration: underline;
-    text-decoration-color: brown;
-}
-
-.title .title-active {
-    background-color: brown;
-    border-radius: 5px;
-}
-
-.title p {
-    padding: 0 20px;
-}
-
-.col-2 {
-    padding: 0 50px;
-}
-
-/* Services section */
-.service {
-    padding: 60px 30px;
-}
-
-.grid {
-    display: flex;
-    margin: 10px;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.grid-1 {
-    box-shadow: 5px 5px 10px gray;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    width: 100%;
-    transition: all 0.5s ease;
-}
-
-.grid-1:hover {
-    background-color: chocolate;
-    transform: translateY(-10px);
-}
-
-/* Buttons */
-button, .btn, .btn2 {
-    padding: 20px;
-    width: 150px;
-    background-color: black;
-    border-radius: 7px;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover, .btn:hover, .btn2:hover {
-    background-color: chocolate;
-}
-
-button a {
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 20px;
-}
-
-/* Portfolio section */
-.portfolio {
-    margin: 80px 30px;
-}
-
-.photo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.photo1 {
-    width: 400px;
-    height: 500px;
-    border-radius: 10%;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.photo1 img {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    border-radius: 10%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.photo1:hover img {
-    transform: scale(1.1);
-}
-
-.info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), rgb(176, 5, 5));
-    border-radius: 10%;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    font-size: 20px;
-    transition: height 0.8s;
-    overflow: hidden;
-}
-
-.info h3 {
-    text-transform: uppercase;
-    padding: 30px;
-    font-weight: 300;
-}
-
-.info a {
-    text-decoration: none;
-    font-size: 17px;
-    color: rgb(225, 245, 11);
-}
-
-.photo1:hover .info {
-    height: 100%;
-}
-
-/* Contact section */
-.contact {
-    padding: 60px 50px;
-}
-
-.contact-right {
-    box-shadow: 5px 5px 10px gainsboro;
-    width: 600px;
-    height: auto;
-    padding: 20px;
-    border-radius: 7px;
-    transition: all 0.5s ease;
-    background-color: #222;
-}
-
-.contact-right:hover {
-    background-color: chocolate;
-    transform: translate(10px);
-}
-
-.contact-right form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-right form input,
-textarea {
-    margin: 10px;
-    width: 100%;
-    padding: 20px;
-    border: 3px solid cadetblue;
-    border-radius: 10px;
-    font-size: 20px;
-    text-align: center;
-    background: white;
-    color: black;
-}
-
-.contact-right form button {
-    margin: 10px;
-    width: 100%;
-}
-
-/* Social media links */
-.social {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.social a i {
-    color: whitesmoke;
-    font-size: 20px;
-    margin: 0 10px;
-}
-
-/* Footer */
-.footer {
-    width: 100%;
-    height: 60px;
-    background-color: gray;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    line-height: 60px;
-    font-weight: bold;
-}
-
-/* Responsive */
-@media (max-width: 450px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav {
-        flex-direction: column;
-        justify-content: flex-start;
-        right: -400px;
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(66, 18, 18);
-        z-index: 1000;
-        padding: 0 5px;
-    }
-
-    .logo {
-        font-size: 30px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 50px 0;
-    }
-
-    nav ul li {
-        padding: 20px;
-    }
-
-    nav ul li a {
-        font-size: 25px;
-    }
-
-    .close {
-        display: block;
-        z-index: 10000;
-        position: relative;
-        right: 0;
-    }
-
-    .toggle {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .toggle .logo2 {
-        font-size: 30px;
-        margin: 0 40px;
-    }
-
-    .toggle .i {
-        margin: 0 40px;
-    }
+/* ========== FOOTER ========== */
+footer {
+  background-color: var(--dark-black);
+  color: white;
 }
