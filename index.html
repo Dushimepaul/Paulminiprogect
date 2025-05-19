@@ -4,179 +4,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paul Dushime Portfolio</title>
-  <link rel="stylesheet" href="assets/stylee.css" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Remixicon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Style personnalisé -->
+  <link rel="stylesheet" href="assets/stylee.css" />
 </head>
 <body>
-  <div class="header">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-light shadow-sm">
     <div class="container">
-      <nav>
-        <div class="logo"><span>P</span>AUL</div>
-        <div><i class="ri-menu-line open"></i></div>
-        <div class="toggle">
-          <i class="ri-close-large-fill close" style="display: none;"></i>
-        </div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact Us</a></li>
+      <a class="navbar-brand fw-bold text-primary" href="#"><span>P</span>AUL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
-      </nav>
-      <div class="tete">
-        <div>
-          <p>Designer & Develloper wish to be full stack</p>
-          <h1>Hi, I'm <span>Paul</span><br>DUSHIME from Burundi</h1>
-        </div>
-        <div class="img">
-          <img src="assets/image/paul.png" alt="Photo de Paul" />
-        </div>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <div class="about">
+  <!-- HEADER -->
+  <header class="py-5 bg-light">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div>
+        <p class="lead">Designer & Développeur en devenir Full Stack</p>
+        <h1 class="display-5 fw-bold">Salut, je suis <span class="text-primary">Paul</span><br>DUSHIME du Burundi</h1>
+      </div>
+      <div>
+        <img src="assets/image/paul.png" alt="Photo de Paul" class="img-fluid" style="max-height: 300px;" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-1">
-          <img src="assets/image/foto.jpg" alt="Photo de profil" />
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <img src="assets/image/foto.jpg" class="img-fluid rounded" alt="Photo de profil" />
         </div>
-        <div class="col-2">
-          <h1 class="par">ABOUT ME</h1>
-          <p>Je suis un développeur web et mobile passionné, diplômé en ingénierie informatique. <br>
-            Je maîtrise HTML, CSS, JavaScript, PHP, React et React Native. J’ai de l’expérience <br>
-            en création de sites, d'applications mobiles et en gestion de bases de données. <br>
-            Curieux et motivé, je cherche toujours à relever de nouveaux défis.
-          </p>
-          <div class="title">
-            <p class="title-1 title-active">Skills</p>
-            <p class="title-2">Experience</p>
-            <p class="title-3">Education</p>
-          </div>
-          <div class="content">
-            <ul class="content-1">
-              <li><span>Développement Web</span> : HTML, CSS, JavaScript, React, PHP, Node.js</li>
-              <li><span>Développement Mobile</span> : React Native, Android Studio</li>
-              <li><span>Bases de données</span> : MySQL, MongoDB, Firebase</li>
-              <li><span>Langues</span> : Français (courant), Anglais (intermédiaire), Kirundi (natif)</li>
-            </ul>
-            <ul class="content-2" style="display: none;">
-              <li><strong><span>Développeur Web et Mobile Freelance</span></strong><br>
-                Janv. 2023 – Aujourd’hui<br>
-                - Création de sites web vitrine et e-commerce<br>
-                - Développement d’applications mobiles Android avec React Native<br>
-                - Intégration d’API, authentification, paiements en ligne
-              </li>
-              <li><strong><span>Stagiaire en développement logiciel</span></strong><br>
-                Août – Déc. 2022<br>
-                - Conception d’un système de gestion des commandes<br>
-                - Maintenance de la base de données MySQL<br>
-                - Participation à la refonte de l’interface utilisateur
-              </li>
-            </ul>
-            <ul class="content-3" style="display: none;">
-              <li><strong><span>Ingénieur en Informatique</span></strong><br>
-                Université du Burundi – Bujumbura<br>2013 – actuel
-              </li>
-              <li><strong><span>Scientifique (Biochimie)</span></strong><br>
-                Lycée Maranatha de KIVOGA<br>2019 – 2022
-              </li>
-              <li><strong><span>PRIMAIRE</span></strong><br>
-                ECOFO MUSENYI I<br>2009 – 2019
-              </li>
-            </ul>
+        <div class="col-md-8">
+          <h2>À propos de moi</h2>
+          <p>Développeur web et mobile passionné, diplômé en ingénierie informatique. Je maîtrise HTML, CSS, JavaScript, PHP, React et React Native. Curieux et motivé, je suis prêt à relever tous les défis.</p>
+          <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#skills">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#experience">Expérience</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#education">Éducation</a></li>
+          </ul>
+          <div class="tab-content pt-3">
+            <div class="tab-pane fade show active" id="skills">
+              <ul>
+                <li><strong>Web :</strong> HTML, CSS, JavaScript, React, PHP, Node.js</li>
+                <li><strong>Mobile :</strong> React Native, Android Studio</li>
+                <li><strong>BDD :</strong> MySQL, MongoDB, Firebase</li>
+                <li><strong>Langues :</strong> Français, Anglais, Kirundi</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="experience">
+              <ul>
+                <li><strong>Freelance</strong> (2023 – Aujourd’hui) : Sites web, apps mobiles, API, paiements en ligne</li>
+                <li><strong>Stagiaire</strong> (2022) : Système de gestion, MySQL, UI refonte</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="education">
+              <ul>
+                <li><strong>Université du Burundi</strong> – Ingénieur en Informatique</li>
+                <li><strong>Lycée Maranatha</strong> – Biochimie</li>
+                <li><strong>ECOFO Musenyi</strong> – Primaire</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="service">
-    <div class="container">
-      <h1 class="para">MY SERVICES</h1>
-      <div class="grid">
-        <div class="grid-1">
-          <h2>Web Design</h2>
-          <p>Conception de sites attrayants, modernes et responsives, adaptés à tous les écrans.</p>
-          <button><a href="#">Learn more</a></button>
-        </div>
-        <div class="grid-1">
-          <h2>Web Development</h2>
-          <p>Développement de sites dynamiques et performants selon vos besoins professionnels.</p>
-          <button><a href="#">Learn more</a></button>
-        </div>
-        <div class="grid-1">
-          <h2>Apps Design</h2>
-          <p>Création d’interfaces mobiles conviviales et ergonomiques pour Android et iOS.</p>
-          <button><a href="#">Learn more</a></button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio">
-    <div class="container">
-      <h1 class="para">MY WORKS</h1>
-      <div class="photo">
-        <div class="photo1">
-          <img src="assets/image/machi.jpg" alt="Projet 1" />
-          <div class="info">
-            <h3>Social Media</h3>
-            <p>Application de communication avec design moderne et fonctionnalités sociales.</p>
-            <a href="#">Voir</a>
+  <!-- SERVICES -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Mes Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Web Design</h5>
+              <p>Sites modernes, responsives et esthétiques pour tous les appareils.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
           </div>
         </div>
-        <div class="photo1">
-          <img src="assets/image/machin.jpg" alt="Projet 2" />
-          <div class="info">
-            <h3>Music Apps</h3>
-            <p>Plateforme musicale permettant l’écoute, le tri et la gestion des playlists.</p>
-            <a href="#">Voir</a>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p>Sites dynamiques, performants et sur mesure selon vos besoins.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
           </div>
         </div>
-        <div class="photo1">
-          <img src="assets/image/machini.jpg" alt="Projet 3" />
-          <div class="info">
-            <h3>Shopping Online</h3>
-            <p>Application e-commerce pour achats en ligne, avec panier et paiement sécurisé.</p>
-            <a href="#">Voir</a>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Apps Design</h5>
+              <p>Interfaces mobiles ergonomiques pour Android et iOS.</p>
+              <a href="#" class="btn btn-outline-primary">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
-      <button class="btn"><a href="#">See more</a></button>
     </div>
-  </div>
+  </section>
 
-  <div class="contact">
+  <!-- PORTFOLIO -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Mes Projets</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="assets/image/machi.jpg" class="img-fluid rounded" alt="Projet 1" />
+          <h5 class="mt-2">Social Media</h5>
+          <p>Application de communication avec fonctionnalités sociales.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/image/machin.jpg" class="img-fluid rounded" alt="Projet 2" />
+          <h5 class="mt-2">Music App</h5>
+          <p>Plateforme d'écoute de musique avec playlists.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/image/machini.jpg" class="img-fluid rounded" alt="Projet 3" />
+          <h5 class="mt-2">Shopping Online</h5>
+          <p>Application e-commerce avec paiement intégré.</p>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary mt-4">Voir plus</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="bg-light py-5">
     <div class="container">
-      <div class="row">
-        <div class="contact-left">
-          <h2>CONTACT ME</h2>
-          <p>PAUL@GMAIL.COM</p>
-          <p>+257 68863945</p>
-          <div class="social">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2>Contactez-moi</h2>
+          <p>Email : paul@gmail.com</p>
+          <p>Téléphone : +257 68863945</p>
+          <div>
+            <a href="#" class="me-3"><i class="ri-facebook-fill"></i></a>
             <a href="#"><i class="ri-instagram-fill"></i></a>
           </div>
-          <button class="btn2" type="button">CONSULTEZ MON CV</button>
+          <a href="#" class="btn btn-outline-dark mt-3">Voir mon CV</a>
         </div>
-        <div class="contact-right">
-          <form action="#">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="gmail" placeholder="Your Email" required />
-            <textarea rows="6" placeholder="Your Message"></textarea>
-            <button type="submit">ENVOYER</button>
+        <div class="col-md-6">
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Votre nom" required>
+            <input type="email" class="form-control mb-3" placeholder="Votre email" required>
+            <textarea rows="6" class="form-control mb-3" placeholder="Votre message"></textarea>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
           </form>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="footer">
-    <p>© Paul - Made with by Easy Tutorials</p>
-  </div>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© Paul - Made with ❤️ by Easy Tutorials</p>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/java.js"></script>
 </body>
 </html>
