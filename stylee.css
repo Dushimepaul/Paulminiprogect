@@ -1,125 +1,92 @@
-/* ========== COULEURS GÉNÉRALES ========== */
+/* Couleurs principales */
 :root {
   --primary-blue: #007bff;
-  --success-green: #28a745;
-  --dark-black: #000000;
-  --light-gray: #f8f9fa;
-  --text-dark: #1a1a1a;
+  --primary-green: #28a745;
+  --primary-black: #000000;
 }
 
-/* ========== RÉINITIALISATION DE BASE ========== */
+/* Général */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-dark);
-  background-color: var(--light-gray);
-  margin: 0;
-  padding: 0;
+  background-color: #fff;
+  color: var(--primary-black);
+  padding-top: 70px; /* espace navbar fixe */
 }
 
-/* ========== NAVBAR ========== */
-.navbar {
-  background-color: var(--light-gray) !important;
-}
-
+/* Navbar personnalisée */
 .navbar-brand span {
-  color: var(--primary-blue);
+  color: var(--primary-green);
 }
 
 .navbar-nav .nav-link {
-  color: var(--dark-black);
-  font-weight: 500;
-}
-
-.navbar-nav .nav-link:hover {
-  color: var(--success-green);
-}
-
-/* ========== HEADER ========== */
-header {
-  background-color: var(--light-gray);
-  color: var(--dark-black);
-}
-
-header .lead {
-  color: var(--success-green);
-}
-
-header h1 span {
   color: var(--primary-blue);
+  transition: color 0.3s ease;
 }
 
-/* ========== SECTIONS ========== */
-section h2 {
-  color: var(--primary-blue);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-green);
 }
 
-section p,
-section li {
-  color: var(--dark-black);
+/* Headers */
+h1, h2, h3, h4, h5 {
+  color: var(--primary-black);
 }
 
-/* ========== TABS ========== */
-.nav-tabs .nav-link.active {
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+/* Section header */
+header.bg-black {
+  background-color: #000 !important;
+  color: white;
+}
+
+/* Section contact */
+section.bg-black {
+  background-color: #000 !important;
+  color: white;
+}
+
+/* Boutons */
+.btn-primary {
   background-color: var(--primary-blue);
-  color: #fff;
-  font-weight: bold;
+  border-color: var(--primary-blue);
 }
 
-.nav-tabs .nav-link {
+.btn-primary:hover {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.btn-outline-primary {
   color: var(--primary-blue);
+  border-color: var(--primary-blue);
 }
 
-/* ========== SERVICES ========== */
+.btn-outline-primary:hover {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
+}
+
+/* Cartes */
 .card {
   border: 1px solid var(--primary-blue);
 }
 
 .card-title {
-  color: var(--primary-blue);
+  color: var(--primary-green);
 }
 
-.btn-outline-primary {
-  border-color: var(--primary-blue);
-  color: var(--primary-blue);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--primary-blue);
-  color: #fff;
-}
-
-/* ========== PORTFOLIO ========== */
-section img {
-  border: 3px solid var(--success-green);
-}
-
-/* ========== CONTACT ========== */
-section a i {
-  font-size: 1.5rem;
-  color: var(--primary-blue);
-}
-
-section a i:hover {
-  color: var(--success-green);
-}
-
-/* ========== FORMULAIRE ========== */
-form input,
-form textarea {
-  border: 1px solid var(--primary-blue);
-}
-
-form button {
-  background-color: var(--primary-blue);
-  border: none;
-}
-
-form button:hover {
-  background-color: var(--success-green);
-}
-
-/* ========== FOOTER ========== */
-footer {
-  background-color: var(--dark-black);
+/* Footer */
+footer.bg-dark {
+  background-color: #111;
   color: white;
 }
+
+/* Dark mode basique pour la navbar fixe */
+body.dark-mode .navbar.fixed-top {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid var
