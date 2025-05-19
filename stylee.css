@@ -1,92 +1,106 @@
-/* Couleurs principales */
 :root {
-  --primary-blue: #007bff;
-  --primary-green: #28a745;
-  --primary-black: #000000;
-}
+      --primary-color: #007bff;
+      --secondary-color: #28a745;
+      --dark-color: #000000;
+    }
 
-/* Général */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  color: var(--primary-black);
-  padding-top: 70px; /* espace navbar fixe */
-}
+    body {
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-/* Navbar personnalisée */
-.navbar-brand span {
-  color: var(--primary-green);
-}
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-.navbar-nav .nav-link {
-  color: var(--primary-blue);
-  transition: color 0.3s ease;
-}
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--primary-green);
-}
+    .navbar-brand span {
+      color: var(--primary-color);
+    }
 
-/* Headers */
-h1, h2, h3, h4, h5 {
-  color: var(--primary-black);
-}
+    header {
+      background-color: var(--dark-color);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 80px;
+    }
 
-.text-primary {
-  color: var(--primary-blue) !important;
-}
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
 
-/* Section header */
-header.bg-black {
-  background-color: #000 !important;
-  color: white;
-}
+    .btn-outline-light:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      color: #fff;
+    }
 
-/* Section contact */
-section.bg-black {
-  background-color: #000 !important;
-  color: white;
-}
+    .icon-box {
+      background: var(--primary-color);
+    }
 
-/* Boutons */
-.btn-primary {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
-}
+    .card-title {
+      color: var(--primary-color);
+    }
 
-.btn-primary:hover {
-  background-color: var(--primary-green);
-  border-color: var(--primary-green);
-}
+    .progress-bar {
+      background-color: var(--primary-color);
+    }
 
-.btn-outline-primary {
-  color: var(--primary-blue);
-  border-color: var(--primary-blue);
-}
+    .section-title {
+      color: var(--dark-color);
+    }
 
-.btn-outline-primary:hover {
-  background-color: var(--primary-green);
-  border-color: var(--primary-green);
-  color: white;
-}
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width 0.3s;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
-/* Cartes */
-.card {
-  border: 1px solid var(--primary-blue);
-}
+    .nav-link:hover::after {
+      width: 100%;
+    }
 
-.card-title {
-  color: var(--primary-green);
-}
+    @media (max-width: 768px) {
+      header {
+        text-align: center;
+      }
 
-/* Footer */
-footer.bg-dark {
-  background-color: #111;
-  color: white;
-}
+      header img {
+        margin-top: 20px;
+        max-height: 200px !important;
+      }
 
-/* Dark mode basique pour la navbar fixe */
-body.dark-mode .navbar.fixed-top {
-  background-color: #1e1e1e !important;
-  border-bottom: 1px solid var
+      .about-section .row {
+        flex-direction: column-reverse;
+      }
+
+      .about-section img {
+        margin-bottom: 20px;
+      }
+
+      .service-card, .project-card {
+        margin-bottom: 20px;
+      }
+    }
+
+    .service-card, .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover, .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
